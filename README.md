@@ -20,3 +20,4 @@ Provided is a demo script named demo.py which can be used as a template for the 
 
 Follow the comments provided in the script to help get a better understanding of each line.
 
+For the full functionality and detailed description of the SDK, check out the [official API doc](https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api.md). I would just ctrl+f and search for the function you are interested in.
