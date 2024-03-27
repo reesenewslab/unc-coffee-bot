@@ -2,6 +2,11 @@
 The code repository for the coffee making robot.
 
 ## Getting Started
+First, clone this repository:
+```bash
+git clone https://github.com/reesenewslab/unc-coffee-bot.git
+```
+
 ### Download xArm SDK
 Before starting anything with the Python implementation of the xArm, please clone the official SDK and set it up in your favourite folder:
 ```bash
