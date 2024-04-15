@@ -17,10 +17,23 @@ python setup.py install
 
 
 ### Run flask server
-Make sure you have python and pip installed, and have your python environment set up.
-Next, run the following:
+Make sure you have python and pip installed, and run the following commands in terminal while in the UNC-COFFEE-BOT directory:
+
+```
+pip install virtualenv
+virtualenv env
+source env/bin/activate
+```
+You should now see something that looks like
+```
+(env) envuser@your-computer-type unc-coffee-bot % 
+```
+With (env) at the beginning. Now you can install flask in the project environment using the following:
 ```
 pip install -r requirements.txt
+```
+After this you can close the terminal and open a new one to run the flask api.
+```
 cd api
 flask run
 ```
