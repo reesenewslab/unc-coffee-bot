@@ -15,13 +15,20 @@ cd xArm-Python-SDK
 python setup.py install
 ```
 
+
+### Run flask server
 ```
 pip install -r requirements.txt
+cd api
+flask run
 ```
-or 
+Output:
 ```
-pip3 install -r requirements.txt
-```
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+ ```
+
+
 
 ### demo.py
 Provided is a demo script named demo.py which can be used as a template for the movement and gripping functions. In this script you will find the functions to make the robot move in the xyz cartesian coordinate system and in the joint coordinate system. The functions for controlling the gripper are given as well.
