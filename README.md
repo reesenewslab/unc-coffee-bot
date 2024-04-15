@@ -17,6 +17,8 @@ python setup.py install
 
 
 ### Run flask server
+Make sure you have python and pip installed, and have your python environment set up.
+Next, run the following:
 ```
 pip install -r requirements.txt
 cd api
@@ -27,6 +29,7 @@ Output:
 WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
  * Running on http://127.0.0.1:5000
  ```
+ Command click on the local server to see your api greeting!
 
 
 
