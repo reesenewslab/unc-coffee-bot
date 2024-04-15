@@ -18,6 +18,10 @@ python setup.py install
 ```
 pip install -r requirements.txt
 ```
+or 
+```
+pip3 install -r requirements.txt
+```
 
 ### demo.py
 Provided is a demo script named demo.py which can be used as a template for the movement and gripping functions. In this script you will find the functions to make the robot move in the xyz cartesian coordinate system and in the joint coordinate system. The functions for controlling the gripper are given as well.
