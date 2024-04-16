@@ -18,7 +18,7 @@ def order_coffee():
         if syrup_type:
             drink_ordered["syrup_type"] = syrup_type
 
-        return jsonify(drink_ordered)
+        return jsonify(f"You ordered {coffee_type} with {syrup_type}")
     else:
         return jsonify({"error": "Coffee type is required"}), 400
 
