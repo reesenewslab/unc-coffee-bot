@@ -2,7 +2,7 @@
 
 from xarm.wrapper import XArmAPI #Import the xArmAPI class from the xArm Python SDK
 
-ip = "192.168.1.213" #Change this to your xArm IP address
+ip = "192.168.1.215" #Change this to your xArm IP address
 
 #Initialize the xArm with the following parameters:
 arm = XArmAPI(ip)
