@@ -15,13 +15,36 @@ cd xArm-Python-SDK
 python setup.py install
 ```
 
+
+### Run flask server
+Make sure you have python and pip installed, and run the following commands in terminal while in the UNC-COFFEE-BOT directory:
+
+```
+pip install virtualenv
+virtualenv env
+source env/bin/activate
+```
+You should now see something that looks like
+```
+(env) envuser@your-computer-type unc-coffee-bot % 
+```
+With (env) at the beginning. Now you can install flask in the project environment using the following:
 ```
 pip install -r requirements.txt
 ```
-or 
+After this you can close the terminal and open a new one to run the flask api.
 ```
-pip3 install -r requirements.txt
+cd api
+flask run
 ```
+Output:
+```
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+ ```
+ Command click on the local server to see your api greeting!
+
+
 
 ### demo.py
 Provided is a demo script named demo.py which can be used as a template for the movement and gripping functions. In this script you will find the functions to make the robot move in the xyz cartesian coordinate system and in the joint coordinate system. The functions for controlling the gripper are given as well.
