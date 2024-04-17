@@ -1,11 +1,24 @@
+"""Main file where everything will be!."""
 
 
-"""Psuedcode for coffee making big file with how i think it should be."""
-
-
-from enum import Enum
-from extra_drinks import make_coffee
+from drinks import make_coffee
 from syrups import pump_syrup
+from final_spots import spot0, spot1, spot2, spot3
+from common_functions import open_gripper
+from xarm.wrapper import XArmAPI
+from enum import Enum
+
+
+ip = "192.168.1.213" #Change this to your xArm IP address
+
+#Initialize the xArm with the following parameters:
+arm = XArmAPI(ip)
+arm.motion_enable(enable=True)
+arm.set_mode(0) #Set the mode to 0 (position control mode for x, y, z, roll, pitch, yaw) OR set the mode to 1 (servo control mode for 6 joints)
+arm.set_state(state=0) #Start with state 0 (ready)
+arm.set_gripper_mode(0) #Set the gripper mode to 0 (position control mode)
+
+arm_speed: int = 50
 
 
 #enums to store coffee and syrup types that will come in from the json. numbers will likely be replaced with whatever the value from the json is called
@@ -58,7 +71,6 @@ def get_cup_fom_machine():
 
 def select_coffee(coffee_type: Coffee):
    make_coffee(coffee_type)
-   return None
 
 
 def select_syrup(syrup: Syrup):
@@ -74,11 +86,21 @@ def move_to_central_location():
    return None
 
 
-def move_to_final_location(final_place_number: int):
+def move_to_final_location():
    """Place the cup in the final spot depending on what spot has been used last."""
    # this will increase the place to the next place and keep it to max 4 with mod! spots are 0-4
+   global final_place_number
    final_place_number = (final_place_number + 1) % 4
-   return None
+   if final_place_number == 0:
+      spot0()
+   elif final_place_number == 1:
+      spot1()
+   elif final_place_number == 2:
+      spot2()
+   elif final_place_number == 3:
+     spot3()
+   open_gripper()
+     
 
 
 def main():
@@ -90,7 +112,7 @@ def main():
    get_cup_fom_machine()
    select_syrup(syrup)
    move_to_central_location()
-   move_to_final_location(final_place_number)
+   move_to_final_location()
 
 
 if __name__ == "__main__":
