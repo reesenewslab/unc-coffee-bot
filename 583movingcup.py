@@ -122,87 +122,87 @@ class RobotMain(object):
             self._angle_speed = 30
             self._tcp_speed = 30
             self._tcp_acc = 30
-            code = self._arm.set_servo_angle(angle=[-13.4, 4.4, -96.4, 183.9, 1.0, -184.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-13.4, 4.4, -96.4, 183.9, 1.0, -184.9], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-31.8, 30.2, -61.2, 135.7, 71.8, -167.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=0.0)
+            code = self._arm.set_servo_angle(angle=[-31.8, 30.2, -61.2, 135.7, 71.8, -167.9], speed=self._angle_speed,  wait=False, radius=0.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-26.6, 57.3, -85.1, 135.7, 70.0, -164.8], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=0.0)
+            code = self._arm.set_servo_angle(angle=[-26.6, 57.3, -85.1, 135.7, 70.0, -164.8], speed=self._angle_speed,  wait=False, radius=0.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-26.8, 70.8, -95.5, 135.7, 70.2, -162.2], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=0.0)
+            code = self._arm.set_servo_angle(angle=[-26.8, 70.8, -95.5, 135.7, 70.2, -162.2], speed=self._angle_speed,  wait=False, radius=0.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
             code = self._arm.set_gripper_position(250, wait=True, speed=5000, auto_enable=True)
             if not self._check_code(code, 'set_gripper_position'):
                 return
-            code = self._arm.set_servo_angle(angle=[-28.9, 55.7, -81.5, 133.7, 76.6, -167.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=0.0)
+            code = self._arm.set_servo_angle(angle=[-28.9, 55.7, -81.5, 133.7, 76.6, -167.9], speed=self._angle_speed,  wait=False, radius=0.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-22.2, 18.6, -70.0, 133.7, 61.0, -147.7], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=0.0)
+            code = self._arm.set_servo_angle(angle=[-22.2, 18.6, -70.0, 133.7, 61.0, -147.7], speed=self._angle_speed,  wait=False, radius=0.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-8.8, 19.7, -47.1, 134.9, 58.9, 15.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-8.8, 19.7, -47.1, 134.9, 58.9, 15.9], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-7.7, 19.6, -37.9, 121.7, 68.5, 15.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-7.7, 19.6, -37.9, 121.7, 68.5, 15.9], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-5.9, 23.1, -36.4, 121.7, 76.6, 13.7], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-5.9, 23.1, -36.4, 121.7, 76.6, 13.7], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-1.7, 28.7, -42.2, 121.7, 76.5, 13.7], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-1.7, 28.7, -42.2, 121.7, 76.5, 13.7], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
             code = self._arm.set_gripper_position(800, wait=True, speed=5000, auto_enable=True)
             if not self._check_code(code, 'set_gripper_position'):
                 return
-            code = self._arm.set_servo_angle(angle=[-15.8, 18.6, -30.7, 111.2, 76.6, 13.7], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-15.8, 18.6, -30.7, 111.2, 76.6, 13.7], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-35.2, 13.6, -27.3, 88.8, 78.3, 13.7], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-35.2, 13.6, -27.3, 88.8, 78.3, 13.7], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-23.5, -12.4, -27.3, 88.8, 89.6, 13.7], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-23.5, -12.4, -27.3, 88.8, 89.6, 13.7], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-13.7, -12.1, -27.5, 93.7, 85.6, 13.7], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-13.7, -12.1, -27.5, 93.7, 85.6, 13.7], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
             time.sleep(2)
-            code = self._arm.set_servo_angle(angle=[-25.8, -10.9, -31.1, 89.1, 83.9, 13.7], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-25.8, -10.9, -31.1, 89.1, 83.9, 13.7], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
             time.sleep(40)
-            code = self._arm.set_servo_angle(angle=[-20.6, 18.6, -30.9, 104.5, 77.5, 11.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-20.6, 18.6, -30.9, 104.5, 77.5, 11.9], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-0.5, 26.9, -38.7, 128.9, 78.9, 11.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-0.5, 26.9, -38.7, 128.9, 78.9, 11.9], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
             code = self._arm.set_gripper_position(300, wait=True, speed=5000, auto_enable=True)
             if not self._check_code(code, 'set_gripper_position'):
                 return
-            code = self._arm.set_servo_angle(angle=[-2.2, 23.7, -35.8, 128.9, 78.9, 11.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-2.2, 23.7, -35.8, 128.9, 78.9, 11.9], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-23.9, 20.3, -36.4, 92.8, 84.4, 11.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-23.9, 20.3, -36.4, 92.8, 84.4, 11.9], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-13.5, 20.3, -33.9, 68.9, 90.8, 11.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-13.5, 20.3, -33.9, 68.9, 90.8, 11.9], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-1.1, 12.3, -23.5, 70.3, 86.9, 11.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-1.1, 12.3, -23.5, 70.3, 86.9, 11.9], speed=self._angle_speed,  wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[8.2, 12.3, -20.4, 49.1, 93.2, 4.7], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=0.0)
+            code = self._arm.set_servo_angle(angle=[8.2, 12.3, -20.4, 49.1, 93.2, 4.7], speed=self._angle_speed,  wait=False, radius=0.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[84.7, 12.5, -13.2, 117.9, 84.6, 1.3], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=0.0)
+            code = self._arm.set_servo_angle(angle=[84.7, 12.5, -13.2, 117.9, 84.6, 1.3], speed=self._angle_speed,  wait=False, radius=0.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[81.1, 28.5, -18.1, 116.7, 91.7, -6.8], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=0.0)
+            code = self._arm.set_servo_angle(angle=[81.1, 28.5, -18.1, 116.7, 91.7, -6.8], speed=self._angle_speed,  wait=False, radius=0.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
             code = self._arm.set_gripper_position(800, wait=True, speed=5000, auto_enable=True)
