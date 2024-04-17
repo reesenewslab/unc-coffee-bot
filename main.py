@@ -5,20 +5,8 @@ from drinks import make_coffee
 from syrups import pump_syrup
 from final_spots import spot0, spot1, spot2, spot3
 from common_functions import open_gripper
-from xarm.wrapper import XArmAPI
 from enum import Enum
-
-
-ip = "192.168.1.213" #Change this to your xArm IP address
-
-#Initialize the xArm with the following parameters:
-arm = XArmAPI(ip)
-arm.motion_enable(enable=True)
-arm.set_mode(0) #Set the mode to 0 (position control mode for x, y, z, roll, pitch, yaw) OR set the mode to 1 (servo control mode for 6 joints)
-arm.set_state(state=0) #Start with state 0 (ready)
-arm.set_gripper_mode(0) #Set the gripper mode to 0 (position control mode)
-
-arm_speed: int = 50
+from common_functions import open_gripper, get_full_cup, get_to_cup, pick_up_and_place_cup, leave_cup_move_to_button, move_full_cup_to_central_spot
 
 
 #enums to store coffee and syrup types that will come in from the json. numbers will likely be replaced with whatever the value from the json is called

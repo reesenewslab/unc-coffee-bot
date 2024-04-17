@@ -42,7 +42,6 @@ def click_right():
 
 def make_coffee(Coffee: Coffee):
     """Makes the coffee."""
-    arm.set_servo_angle(angle=[-23.5, -12.4, -27.3, 88.8, 89.6, 13.7], speed=arm_speed, wait=False, radius=0.0)
     match Coffee:
         case Coffee.ESPRESSO:
             arm.set_servo_angle(angle=[-13.7, -12.1, -27.5, 93.7, 85.6, 13.7], speed=arm_speed,  wait=False, radius=40.0)

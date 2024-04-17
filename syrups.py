@@ -19,14 +19,14 @@ arm.set_gripper_mode(0) #Set the gripper mode to 0 (position control mode)
 
 arm_speed: int = 50
 
-#TODO: get TCP speed for line 29
+#TODO: get TCP speed for line 29 instead of being 0!!!!!
 
 def pump_syrup():
     arm.set_servo_angle(angle=[-23.9, 20.3, -36.4, 92.8, 84.4, 11.9], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-11.1, 4.2, -20.0, 91.9, 82.4, 11.9], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-0.8, -20.5, -13.7, 100.4, 82.2, 32.2], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[21.6, -16.3, -22.2, 119.8, 62.8, 32.2], speed=arm_speed,  wait=False, radius=0.0)
-    arm.set_position(*[506.7, 444.6, 208.4, 154.2, 87.9, -165.4], speed=self._tcp_speed,  radius=0.0, wait=False)
+    arm.set_position(*[506.7, 444.6, 208.4, 154.2, 87.9, -165.4], speed=0,  radius=0.0, wait=False)
     arm.set_gripper_position(800, wait=True, speed=5000, auto_enable=True)
     arm.set_servo_angle(angle=[51.4, -14.1, -17.8, 192.0, 57.6, -4.8], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[50.3, -40.0, -39.8, 192.0, 12.8, -4.8], speed=arm_speed,  wait=False, radius=0.0)
