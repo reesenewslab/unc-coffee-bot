@@ -15,6 +15,7 @@ from common_functions import open_gripper, get_full_cup, get_to_cup, pick_up_and
 #TODO: create final place to go before restarting again
 #TODO: how many syrups will we have
 #TODO: finalize click right
+#TODO: get wait times for each drink. where to add
 
 #enums to store coffee and syrup types that will come in from the json. numbers will likely be replaced with whatever the value from the json is called
 class Coffee(Enum):
@@ -28,7 +29,7 @@ class Coffee(Enum):
 
 class Syrup(Enum):
    VANILLA = "VANILLA"
-   CARAMEL =2
+   CARAMEL = 2
    NONE =  "NONE"
 
 # no idea the actual data type but lets assume string. this is what robot will press

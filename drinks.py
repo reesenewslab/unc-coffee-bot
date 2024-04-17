@@ -22,7 +22,7 @@ arm.set_gripper_mode(0) #Set the gripper mode to 0 (position control mode)
 
 arm_speed: int = 50
 
-#TODO: get normal espresso moiton!
+#TODO: confirm click_right()
 #TODO: get wait times for each thing 
 
 class Coffee(Enum):
