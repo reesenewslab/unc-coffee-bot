@@ -35,10 +35,11 @@ class Coffee(Enum):
 
 def click_right():
     """Go to the next page."""
-    #TODO: make sure this is actually what I meant
-    arm.set_servo_angle(angle=[-18.1, -0.9, -45.4, 88.9, 77.4, 13.7], speed=arm_speed, wait=False, radius=0.0)
-    arm.set_servo_angle(angle=[-16.9, 2.0, -49.4, 86.0, 78.3, 13.7], speed=arm_speed, wait=False, radius=0.0)
+    arm.set_servo_angle(angle=[-22.2, 3.2, -46.9, 88.8, 84.4, 13.7], speed=arm_speed, wait=False, radius=0.0)
+    arm.set_servo_angle(angle=[-19.3, 6.8, -49.6, 89.4, 84.7, 13.7], speed=arm_speed,  wait=False, radius=0.0)
+    arm.set_servo_angle(angle=[-22.2, 3.2, -46.9, 88.8, 84.4, 13.7], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-23.5, -12.4, -27.3, 88.8, 89.6, 13.7], speed=arm_speed, wait=False, radius=0.0)
+
 
 def make_coffee(Coffee: Coffee):
     """Makes the coffee."""

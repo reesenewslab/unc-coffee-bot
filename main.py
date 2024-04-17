@@ -8,6 +8,13 @@ from common_functions import open_gripper
 from enum import Enum
 from common_functions import open_gripper, get_full_cup, get_to_cup, pick_up_and_place_cup, leave_cup_move_to_button, move_full_cup_to_central_spot
 
+#TODO: set arm speed across the files 
+#TODO: figure how much movign goes before syrups
+#TODO: set syrup TCP speed -- and make syrup multipe functions??
+#TODO: set IP address
+#TODO: create final place to go before restarting again
+#TODO: how many syrups will we have
+#TODO: finalize click right
 
 #enums to store coffee and syrup types that will come in from the json. numbers will likely be replaced with whatever the value from the json is called
 class Coffee(Enum):
@@ -37,24 +44,16 @@ wait_times: float = 0
 final_place_number: int = 0
 
 
-def dispense_cup():
-   """Dispense the cup. runs the blockly the grabs the cup"""
-   return None
-
-
-def move_to_machine():
-   """Move the dispensed cup to the spot under the coffee machine via blockly"""
-   return None
-
-
-def drop_cup_at_machine():
-   """Place cup under coffee machine."""
-   return None
+def cup_intro_sequence():
+   """First three function that remove the cup, place it in front of the coffee machine and leave the cup to hit the button."""
+   get_to_cup()
+   pick_up_and_place_cup()
+   leave_cup_move_to_button()
 
 
 def get_cup_fom_machine():
    """Pick up cup from machine."""
-   return None
+   get_full_cup()
 
 
 def select_coffee(coffee_type: Coffee):
@@ -71,7 +70,7 @@ def select_syrup(syrup: Syrup):
 
 def move_to_central_location():
    """Move the dispensed cup to a central location"""
-   return None
+   move_full_cup_to_central_spot()
 
 
 def move_to_final_location():
@@ -93,9 +92,7 @@ def move_to_final_location():
 
 def main():
    """Execute all of the functions to make the coffee!"""
-   dispense_cup()
-   move_to_machine()
-   drop_cup_at_machine()
+   cup_intro_sequence()
    select_coffee(coffee_type)
    get_cup_fom_machine()
    select_syrup(syrup)
