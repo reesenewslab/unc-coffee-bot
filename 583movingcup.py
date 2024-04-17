@@ -120,30 +120,27 @@ class RobotMain(object):
     def run(self):
         try:
             self._angle_speed = 30
-            self._tcp_speed = 50
-            self._tcp_acc = 50
+            self._tcp_speed = 30
+            self._tcp_acc = 30
             code = self._arm.set_servo_angle(angle=[-13.4, 4.4, -96.4, 183.9, 1.0, -184.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-13.6, 27.9, -113.8, 182.0, -6.9, -183.2], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-31.8, 30.2, -61.2, 135.7, 71.8, -167.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=0.0)
+            if not self._check_code(code, 'set_servo_angle'):
+                return
+            code = self._arm.set_servo_angle(angle=[-26.6, 57.3, -85.1, 135.7, 70.0, -164.8], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=0.0)
+            if not self._check_code(code, 'set_servo_angle'):
+                return
+            code = self._arm.set_servo_angle(angle=[-26.8, 70.8, -95.5, 135.7, 70.2, -162.2], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=0.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
             code = self._arm.set_gripper_position(250, wait=True, speed=5000, auto_enable=True)
             if not self._check_code(code, 'set_gripper_position'):
                 return
-            code = self._arm.set_servo_angle(angle=[-13.2, 25.7, -128.1, 175.6, -6.9, -176.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-28.9, 55.7, -81.5, 133.7, 76.6, -167.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=0.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            code = self._arm.set_servo_angle(angle=[-15.5, 24.0, -101.0, 0.7, -23.5, -179.6], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
-            if not self._check_code(code, 'set_servo_angle'):
-                return
-            code = self._arm.set_servo_angle(angle=[2.7, 6.1, -67.0, -0.4, -31.7, -177.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
-            if not self._check_code(code, 'set_servo_angle'):
-                return
-            code = self._arm.set_servo_angle(angle=[5.6, -8.7, -74.5, 152.2, 9.0, 30.7], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
-            if not self._check_code(code, 'set_servo_angle'):
-                return
-            code = self._arm.set_servo_angle(angle=[-7.1, 9.6, -43.2, 150.7, 49.8, 30.7], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
+            code = self._arm.set_servo_angle(angle=[-22.2, 18.6, -70.0, 133.7, 61.0, -147.7], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=0.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
             code = self._arm.set_servo_angle(angle=[-8.8, 19.7, -47.1, 134.9, 58.9, 15.9], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
@@ -173,7 +170,7 @@ class RobotMain(object):
             code = self._arm.set_servo_angle(angle=[-13.7, -12.1, -27.5, 93.7, 85.6, 13.7], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
-            time.sleep(1)
+            time.sleep(2)
             code = self._arm.set_servo_angle(angle=[-25.8, -10.9, -31.1, 89.1, 83.9, 13.7], speed=self._angle_speed, mvacc=self._angle_acc, wait=False, radius=40.0)
             if not self._check_code(code, 'set_servo_angle'):
                 return
