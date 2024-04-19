@@ -2,7 +2,7 @@
 
 from xarm.wrapper import XArmAPI
 
-ip = "192.168.1.215" #Change this to your xArm IP address
+ip = "192.168.1.215" 
 
 #Initialize the xArm with the following parameters:
 arm = XArmAPI(ip)
@@ -14,9 +14,6 @@ arm.set_gripper_mode(0) #Set the gripper mode to 0 (position control mode)
 arm_speed: int = 30
 tcp_speed = 30
 tcp_acc = 30
-
-def open_gripper():
-    arm.set_gripper_position(800, wait=True, speed=5000, auto_enable=True) 
 
 
 def get_to_cup():
@@ -35,7 +32,7 @@ def pick_up_and_place_cup():
     arm.set_servo_angle(angle=[-7.7, 19.6, -37.9, 121.7, 68.5, 15.9], speed=arm_speed,  wait=False, radius=40.0)
     arm.set_servo_angle(angle=[-5.9, 23.1, -36.4, 121.7, 76.6, 13.7], speed=arm_speed,  wait=False, radius=40.0)
     arm.set_servo_angle(angle=[-1.7, 28.7, -42.2, 121.7, 76.5, 13.7], speed=arm_speed,  wait=False, radius=40.0)
-    open_gripper()           
+    arm.set_gripper_position(800, wait=True, speed=5000, auto_enable=True)           
 
 
 def leave_cup_move_to_button():
