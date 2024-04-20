@@ -7,8 +7,9 @@
 # Author: Vinman <vinman.wen@ufactory.cc> <vinman.cub@gmail.com>
 
 from xarm.wrapper import XArmAPI
+from common_functions import arm_speed
 
-ip = "192.168.1.215" #Change this to your xArm IP address
+ip = "192.168.1.215"
 
 #Initialize the xArm with the following parameters:
 arm = XArmAPI(ip)
@@ -17,17 +18,14 @@ arm.set_mode(0) #Set the mode to 0 (position control mode for x, y, z, roll, pit
 arm.set_state(state=0) #Start with state 0 (ready)
 arm.set_gripper_mode(0) #Set the gripper mode to 0 (position control mode)
 
-arm_speed: int = 50
 
-#TODO: get TCP speed for line 29 instead of being 0!!!!!
-#TODO: tbh i have no idea if my function names are reflective of what is happening.... i just broke it up based on vibes and for asehtetic purpose
 
 def move_cup_to_syrup():
     arm.set_servo_angle(angle=[-23.9, 20.3, -36.4, 92.8, 84.4, 11.9], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-11.1, 4.2, -20.0, 91.9, 82.4, 11.9], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-0.8, -20.5, -13.7, 100.4, 82.2, 32.2], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[21.6, -16.3, -22.2, 119.8, 62.8, 32.2], speed=arm_speed,  wait=False, radius=0.0)
-    arm.set_position(*[506.7, 444.6, 208.4, 154.2, 87.9, -165.4], speed=0,  radius=0.0, wait=False)
+    arm.set_position(*[506.7, 444.6, 208.4, 154.2, 87.9, -165.4], speed=arm_speed,  radius=0.0, wait=False)
     arm.set_gripper_position(800, wait=True, speed=5000, auto_enable=True)
 
 
@@ -47,6 +45,7 @@ def squirt_syrup_grab_cup():
     arm.set_servo_angle(angle=[50.5, -22.1, -11.0, 191.9, 55.1, -14.4], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[50.6, 2.7, -34.4, 191.9, 55.1, -7.7], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_gripper_position(300, wait=True, speed=5000, auto_enable=True)
+    
 
 def get_cup_again():
     arm.set_servo_angle(angle=[50.5, -26.3, -9.6, 189.8, 55.1, -7.7], speed=arm_speed,  wait=False, radius=0.0)
