@@ -85,7 +85,7 @@ def move_to_final_location():
 def main():
    """Execute all of the functions to make the coffee!"""
    cup_intro_sequence()
-   # select_coffee(coffee_type)
+   select_coffee(coffee_type)
    # get_cup_fom_machine()
    # select_syrup(syrup)
    # move_to_central_location()

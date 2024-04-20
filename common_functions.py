@@ -18,10 +18,12 @@ tcp_acc = 30
 
 def get_to_cup():
     """very beginning, going to grab the cup from the dispenser for the first time."""
+    arm.set_gripper_position(700, wait=True, speed=5000, auto_enable=True)       
+
     arm.set_servo_angle(angle=[-31.8, 30.2, -61.2, 135.7, 71.8, -167.9], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-26.6, 57.3, -85.1, 135.7, 70.0, -164.8], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-26.8, 70.8, -95.5, 135.7, 70.2, -162.2], speed=arm_speed,  wait=False, radius=0.0)
-    arm.set_servo_angle(angle=[-28.0, 71.9, -96.1, 134.3, 75.1, -166.6], speed=arm_speed, wait=False, radius=0.0)
+    arm.set_servo_angle(angle=[-28.0, 71.9, -96.1, 134.3, 75.1, -166.6], speed=arm_speed, wait=True, radius=0.0)
 
     arm.set_gripper_position(150, wait=True, speed=5000, auto_enable=True)       
 
