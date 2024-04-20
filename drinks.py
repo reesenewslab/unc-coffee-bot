@@ -29,6 +29,7 @@ class Coffee(Enum):
    MACCHIATO= "MACCHIATO"
    FLAT_WHITE = "FLAT WHITE"
    TEA= "TEA"
+   AMERICANO= "AMERICANO"
 
 def click_right():
     """Go to the next page."""
