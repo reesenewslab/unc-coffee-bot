@@ -6,30 +6,25 @@ from syrups import pump_syrup
 from final_spots import spot0, spot1, spot2, spot3
 from common_functions import open_gripper
 from enum import Enum
-from common_functions import open_gripper, get_full_cup, get_to_cup, pick_up_and_place_cup, leave_cup_move_to_button, move_full_cup_to_central_spot
+from common_functions import get_full_cup, get_to_cup, pick_up_and_place_cup, leave_cup_move_to_button, move_full_cup_to_central_spot
 
-#TODO: set arm speed across the files 
 #TODO: figure how much movign goes before syrups
-#TODO: set syrup TCP speed -- and make syrup multipe functions??
-#TODO: set IP address
-#TODO: create final place to go before restarting again
-#TODO: how many syrups will we have
-#TODO: finalize click right
-#TODO: get wait times for each drink. where to add
+#TODO: make second syrup script
 
 #enums to store coffee and syrup types that will come in from the json. numbers will likely be replaced with whatever the value from the json is called
 class Coffee(Enum):
    ESPRESSO = "ESPRESSO"
-   DOUBLE_ESPRESSO = "DOUBLE ESPRESSO"
+   MACCHIATO = "MACCHIATO"
    LATTE = "LATTE"
    CAPPUCINO = "CAPPUCINO"
    FLAT_WHITE = "FLAT WHITE"
    TEA= "TEA"
 
 
+
 class Syrup(Enum):
    VANILLA = "VANILLA"
-   CARAMEL = 2
+   CARAMEL = "CARAMEL"
    NONE =  "NONE"
 
 # no idea the actual data type but lets assume string. this is what robot will press
@@ -38,8 +33,6 @@ coffee_type: Coffee = Coffee.ESPRESSO
 # type of syrup, includes none
 syrup: Syrup = Syrup.VANILLA
 
-#wait time for each coffee type
-wait_times: float = 0
 
 # out of 3 (0,1,2,3), will be moduloed in the loop to keep it on a cycle
 final_place_number: int = 0
@@ -87,8 +80,6 @@ def move_to_final_location():
       spot2()
    elif final_place_number == 3:
      spot3()
-   open_gripper()
-     
 
 
 def main():
