@@ -37,7 +37,7 @@ def spot1():
 def spot2():
     arm.set_servo_angle(angle=[8.2, 12.3, -20.4, 49.1, 93.2, 4.7], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[84.7, 12.5, -13.2, 117.9, 84.6, 1.3], speed=arm_speed,  wait=False, radius=0.0)
-    arm.set_servo_angle(angle=[81.1, 28.5, -18.1, 116.7, 91.7, -6.8], speed=arm_speed,  wait=False, radius=0.0)
+    arm.set_servo_angle(angle=[79.8, 31.3, -20.3, 116.7, 91.8, -6.8], speed=arm_speed,  wait=False, radius=0.0)
     open_gripper()
     arm.set_servo_angle(angle=[81, 14.1, -12.4, 116.7, 94.7, -6.8], speed=arm_speed,  wait=False, radius=0.0)
     reset_spot()

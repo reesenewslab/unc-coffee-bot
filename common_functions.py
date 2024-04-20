@@ -21,7 +21,9 @@ def get_to_cup():
     arm.set_servo_angle(angle=[-31.8, 30.2, -61.2, 135.7, 71.8, -167.9], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-26.6, 57.3, -85.1, 135.7, 70.0, -164.8], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-26.8, 70.8, -95.5, 135.7, 70.2, -162.2], speed=arm_speed,  wait=False, radius=0.0)
-    arm.set_gripper_position(250, wait=True, speed=5000, auto_enable=True)       
+    arm.set_servo_angle(angle=[-28.0, 71.9, -96.1, 134.3, 75.1, -166.6], speed=arm_speed, wait=False, radius=0.0)
+
+    arm.set_gripper_position(150, wait=True, speed=5000, auto_enable=True)       
 
 
 def pick_up_and_place_cup():
@@ -30,8 +32,8 @@ def pick_up_and_place_cup():
     arm.set_servo_angle(angle=[-22.2, 18.6, -70.0, 133.7, 61.0, -147.7], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-8.8, 19.7, -47.1, 134.9, 58.9, 15.9], speed=arm_speed,  wait=False, radius=40.0)
     arm.set_servo_angle(angle=[-7.7, 19.6, -37.9, 121.7, 68.5, 15.9], speed=arm_speed,  wait=False, radius=40.0)
-    arm.set_servo_angle(angle=[-5.9, 23.1, -36.4, 121.7, 76.6, 13.7], speed=arm_speed,  wait=False, radius=40.0)
-    arm.set_servo_angle(angle=[-1.7, 28.7, -42.2, 121.7, 76.5, 13.7], speed=arm_speed,  wait=False, radius=40.0)
+    arm.set_servo_angle(angle=[-8.7, 38.9, -53.6, 108.0, 82.1, 10.9], speed=arm_speed, wait=False, radius=0.0)
+
     arm.set_gripper_position(800, wait=True, speed=5000, auto_enable=True)           
 
 

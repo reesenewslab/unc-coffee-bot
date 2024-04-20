@@ -4,7 +4,7 @@
 from drinks import make_coffee
 from syrups import pump_syrup
 from final_spots import spot0, spot1, spot2, spot3
-from common_functions import open_gripper
+# from common_functions import open_gripper
 from enum import Enum
 from common_functions import get_full_cup, get_to_cup, pick_up_and_place_cup, leave_cup_move_to_button, move_full_cup_to_central_spot
 
@@ -85,11 +85,11 @@ def move_to_final_location():
 def main():
    """Execute all of the functions to make the coffee!"""
    cup_intro_sequence()
-   select_coffee(coffee_type)
-   get_cup_fom_machine()
-   select_syrup(syrup)
-   move_to_central_location()
-   move_to_final_location()
+   # select_coffee(coffee_type)
+   # get_cup_fom_machine()
+   # select_syrup(syrup)
+   # move_to_central_location()
+   # move_to_final_location()
 
 
 if __name__ == "__main__":

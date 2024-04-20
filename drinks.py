@@ -42,7 +42,9 @@ def make_coffee(coffee_type: Coffee):
     """Makes the coffee."""
     match coffee_type:
         case Coffee.ESPRESSO:
-            arm.set_servo_angle(angle=[-13.7, -12.1, -27.5, 93.7, 85.6, 13.7], speed=arm_speed,  wait=False, radius=40.0)
+            arm.set_servo_angle(angle=[-16.0, -12.1, -33.8, 83.9, 83.7, 13.7], speed=arm_speed, wait=False, radius=0.0)
+            arm.set_servo_angle(angle=[-15.6, -12.0, -30.7, 88.5, 84.6, 13.7], speed=arm_speed, wait=False, radius=0.0)
+
         case Coffee.CAPPUCINO:
             arm.set_servo_angle(angle=[-14.6, -12.0, -27.3, 88.8, 81.7, 13.7], speed=arm_speed, wait=False, radius=0.0)
         case Coffee.LATTE:
