@@ -10,7 +10,7 @@ from xarm.wrapper import XArmAPI
 import time
 from enum import Enum
 from common_functions import arm_speed
-
+from coffee_types import Coffee
 
 ip = "192.168.1.215"
 
@@ -21,15 +21,12 @@ arm.set_mode(0) #Set the mode to 0 (position control mode for x, y, z, roll, pit
 arm.set_state(state=0) #Start with state 0 (ready)
 arm.set_gripper_mode(0) #Set the gripper mode to 0 (position control mode)
 
+arm_speed: int = 30
+tcp_speed = 30
+tcp_acc = 30
 
-class Coffee(Enum):
-   ESPRESSO = "ESPRESSO"
-   LATTE = "LATTE"
-   CAPPUCINO = "CAPPUCINO"
-   MACCHIATO= "MACCHIATO"
-   FLAT_WHITE = "FLAT WHITE"
-   TEA= "TEA"
-   AMERICANO= "AMERICANO"
+
+
 
 def click_right():
     """Go to the next page."""

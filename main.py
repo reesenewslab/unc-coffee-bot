@@ -12,15 +12,7 @@ from common_functions import get_full_cup, get_to_cup, pick_up_and_place_cup, le
 #TODO: make second syrup script
 
 #enums to store coffee and syrup types that will come in from the json. numbers will likely be replaced with whatever the value from the json is called
-class Coffee(Enum):
-   ESPRESSO = "ESPRESSO"
-   MACCHIATO = "MACCHIATO"
-   LATTE = "LATTE"
-   CAPPUCINO = "CAPPUCINO"
-   FLAT_WHITE = "FLAT WHITE"
-   TEA= "TEA"
-
-
+from coffee_types import Coffee
 
 class Syrup(Enum):
    VANILLA = "VANILLA"
@@ -85,11 +77,11 @@ def move_to_final_location():
 def main():
    """Execute all of the functions to make the coffee!"""
    cup_intro_sequence()
-   select_coffee(coffee_type)
-   # get_cup_fom_machine()
+   select_coffee(coffee_type=Coffee.ESPRESSO)
+   get_cup_fom_machine()
    # select_syrup(syrup)
-   # move_to_central_location()
-   # move_to_final_location()
+   move_to_central_location()
+   move_to_final_location()
 
 
 if __name__ == "__main__":
