@@ -5,7 +5,6 @@ from drinks import make_coffee
 from syrups import pump_syrup
 from final_spots import spot0, spot1, spot2, spot3
 # from common_functions import open_gripper
-from enum import Enum
 from common_functions import get_full_cup, get_to_cup, pick_up_and_place_cup, leave_cup_move_to_button, move_full_cup_to_central_spot
 
 #TODO: figure how much movign goes before syrups
@@ -13,18 +12,7 @@ from common_functions import get_full_cup, get_to_cup, pick_up_and_place_cup, le
 
 #enums to store coffee and syrup types that will come in from the json. numbers will likely be replaced with whatever the value from the json is called
 from coffee_types import Coffee
-
-class Syrup(Enum):
-   VANILLA = "VANILLA"
-   CARAMEL = "CARAMEL"
-   NONE =  "NONE"
-
-# no idea the actual data type but lets assume string. this is what robot will press
-coffee_type: Coffee = Coffee.ESPRESSO
-
-# type of syrup, includes none
-syrup: Syrup = Syrup.VANILLA
-
+from syrup_types import Syrup
 
 # out of 3 (0,1,2,3), will be moduloed in the loop to keep it on a cycle
 final_place_number: int = 0
@@ -46,17 +34,18 @@ def select_coffee(coffee_type: Coffee):
    make_coffee(coffee_type)
 
 
-def select_syrup(syrup: Syrup):
+def select_syrup(syrup_type: Syrup):
    """Place cup under the correct syrup"""
-   if syrup == Syrup.NONE:
+   if syrup_type == Syrup.NONE:
       return None
    else:
         pump_syrup()
 
 
-def move_to_central_location():
+def move_to_central_location(syrup_type: Syrup):
    """Move the dispensed cup to a central location"""
-   move_full_cup_to_central_spot()
+   if syrup_type == Syrup.NONE:
+      move_full_cup_to_central_spot()
 
 
 def move_to_final_location():
@@ -74,16 +63,16 @@ def move_to_final_location():
      spot3()
 
 
-def main():
+def main(coffee_type: Coffee, syrup_type: Syrup):
    """Execute all of the functions to make the coffee!"""
    cup_intro_sequence()
-   select_coffee(coffee_type=Coffee.ESPRESSO)
+   select_coffee(coffee_type)
    get_cup_fom_machine()
-   # select_syrup(syrup)
-   move_to_central_location()
+   select_syrup(syrup_type)
+   move_to_central_location(syrup_type)
    move_to_final_location()
 
 
 if __name__ == "__main__":
-   main()
+   main(coffee_type=Coffee.ESPRESSO, syrup_type=Syrup.VANILLA)
 
