@@ -25,12 +25,18 @@ def move_cup_to_syrup():
     arm.set_servo_angle(angle=[-11.1, 4.2, -20.0, 91.9, 82.4, 11.9], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-0.8, -20.5, -13.7, 100.4, 82.2, 32.2], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[21.6, -16.3, -22.2, 119.8, 62.8, 32.2], speed=arm_speed,  wait=False, radius=0.0)
-    arm.set_position(*[506.7, 444.6, 208.4, 154.2, 87.9, -165.4], speed=arm_speed,  radius=0.0, wait=False)
+    # replacing position with more precise angles
+    # arm.set_position(*[506.7, 444.6, 208.4, 154.2, 87.9, -165.4], speed=arm_speed,  radius=0.0, wait=False)
+    arm.set_servo_angle(angle=[34.8, -15.7, -16.6, 148.4, 57.1, 19.1], speed=arm_speed,  wait=False, radius=0.0)
+    arm.set_servo_angle(angle=[54, 7.6, -38.8, 199.5, 57.2, -8.5], speed=arm_speed,  wait=False, radius=0.0)
+
     arm.set_gripper_position(800, wait=True, speed=5000, auto_enable=True)
 
 
 def get_ready_to_syrup():
-    arm.set_servo_angle(angle=[51.4, -14.1, -17.8, 192.0, 57.6, -4.8], speed=arm_speed,  wait=False, radius=0.0)
+    arm.set_servo_angle(angle=[55.3, -7.7, -23.7, 199, 57, -8.5], speed=arm_speed,  wait=False, radius=0.0)
+
+    arm.set_servo_angle(angle=[50.3, -40, -39.8, 192.0, 12.8, -4.8], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[50.3, -40.0, -39.8, 192.0, 12.8, -4.8], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[47.2, 25.6, -99.9, 191.9, 16.3, -14.4], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[46.9, 37.8, -119.4, 191.9, 5.6, -14.4], speed=arm_speed,  wait=False, radius=0.0)

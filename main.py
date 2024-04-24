@@ -68,11 +68,11 @@ def main(coffee_type: Coffee, syrup_type: Syrup):
    cup_intro_sequence()
    select_coffee(coffee_type)
    get_cup_fom_machine()
-   # select_syrup(syrup_type)
+   select_syrup(syrup_type)
    move_to_central_location(syrup_type)
    move_to_final_location()
 
 
 if __name__ == "__main__":
-   main(coffee_type=Coffee.TEA, syrup_type=Syrup.NONE)
+   main(coffee_type=Coffee.LATTE, syrup_type=Syrup.VANILLA)
 
