@@ -54,7 +54,8 @@ def make_coffee(coffee_type: Coffee):
             arm.set_servo_angle(angle=[-15.9, -2.8, -36.1, 92.7, 80.8, 13.7], speed=arm_speed, wait=False, radius=0.0)
         case Coffee.MACCHIATO:
             click_right()
-            arm.set_servo_angle(angle=[-15.2, -1.9, -39.5, 93.2, 75.9, 13.7], speed=arm_speed, wait=False, radius=0.0)
+            arm.set_servo_angle(angle=[-18.9, 3.5, -43.2, 92.6, 84.5, 28.4], speed=arm_speed, wait=True, radius=0.0)
+            arm.set_servo_angle(angle=[-17.9, 3.5, -43.2, 92.6, 84.6, 28.4], speed=arm_speed, wait=False, radius=0.0)
         case Coffee.AMERICANO:
             click_right()
             arm.set_servo_angle(angle=[-14.0, -12.4, -27.7, 88.8, 80.4, 13.7], speed=arm_speed, wait=False, radius=0.0)

@@ -74,5 +74,5 @@ def main(coffee_type: Coffee, syrup_type: Syrup):
 
 
 if __name__ == "__main__":
-   main(coffee_type=Coffee.LATTE, syrup_type=Syrup.VANILLA)
+   main(coffee_type=Coffee.ESPRESSO, syrup_type=Syrup.VANILLA)
 
