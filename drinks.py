@@ -48,6 +48,7 @@ def make_coffee(coffee_type: Coffee):
         case Coffee.LATTE:
             arm.set_servo_angle(angle=[-16.3, -3.0, -35.8, 92.7, 81.7, 13.7], speed=arm_speed, wait=False, radius=0.0)
         case Coffee.MACCHIATO:
+            click_right()
             arm.set_servo_angle(angle=[-16.9, -5, -39.1, 89.4, 81.5, 13.7], speed=arm_speed, wait=False, radius=0.0)
         case Coffee.AMERICANO:
             click_right()
