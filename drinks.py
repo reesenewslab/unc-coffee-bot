@@ -32,6 +32,11 @@ def click_right():
     """Go to the next page."""
     arm.set_servo_angle(angle=[-22.2, 3.2, -46.9, 88.8, 84.4, 13.7], speed=arm_speed, wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-19.3, 6.8, -49.6, 89.4, 84.7, 13.7], speed=arm_speed,  wait=False, radius=0.0)
+
+    arm.set_servo_angle(angle=[-19.4, 7.1, -52.6, 86.2, 82.5, 13.7], speed=arm_speed, wait=False, radius=0.0)
+    arm.set_servo_angle(angle=[-18.5, 7, -52.3, 86.2, 82.4, 13.7], speed=arm_speed, wait=False, radius=0.0)
+
+
     arm.set_servo_angle(angle=[-22.2, 3.2, -46.9, 88.8, 84.4, 13.7], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-23.5, -12.4, -27.3, 88.8, 89.6, 13.7], speed=arm_speed, wait=False, radius=0.0)
 
@@ -46,24 +51,36 @@ def make_coffee(coffee_type: Coffee):
         case Coffee.CAPPUCINO:
             arm.set_servo_angle(angle=[-14.6, -12.0, -27.3, 88.8, 81.7, 13.7], speed=arm_speed, wait=False, radius=0.0)
         case Coffee.LATTE:
-            arm.set_servo_angle(angle=[-16.3, -3.0, -35.8, 92.7, 81.7, 13.7], speed=arm_speed, wait=False, radius=0.0)
+            arm.set_servo_angle(angle=[-15.9, -2.8, -36.1, 92.7, 80.8, 13.7], speed=arm_speed, wait=False, radius=0.0)
         case Coffee.MACCHIATO:
-            arm.set_servo_angle(angle=[-16.9, -5, -39.1, 89.4, 81.5, 13.7], speed=arm_speed, wait=False, radius=0.0)
+            click_right()
+            arm.set_servo_angle(angle=[-18.9, 3.5, -43.2, 92.6, 84.5, 28.4], speed=arm_speed, wait=True, radius=0.0)
+            arm.set_servo_angle(angle=[-17.9, 3.5, -43.2, 92.6, 84.6, 28.4], speed=arm_speed, wait=False, radius=0.0)
         case Coffee.AMERICANO:
             click_right()
             arm.set_servo_angle(angle=[-14.0, -12.4, -27.7, 88.8, 80.4, 13.7], speed=arm_speed, wait=False, radius=0.0)
         case Coffee.FLAT_WHITE:
             click_right()
-            arm.set_servo_angle(angle=[-15.3, -8.6, -32.1, 89.4, 87.6, 13.7], speed=arm_speed, wait=False, radius=0.0)
+            arm.set_servo_angle(angle=[-16.0, -12.1, -33.8, 83.9, 83.7, 13.7], speed=arm_speed, wait=False, radius=0.0)
+            arm.set_servo_angle(angle=[-15.6, -12.0, -30.7, 88.5, 84.6, 13.7], speed=arm_speed, wait=False, radius=0.0)
         case Coffee.TEA:
             click_right()
             click_right()
-            arm.set_servo_angle(angle=[-16.7, -3.0, -40.9, 81.7, 91.3, 13.7], speed=arm_speed, wait=False, radius=0.0)
             arm.set_servo_angle(angle=[-23.5, -12.4, -27.3, 88.8, 89.6, 13.7], speed=arm_speed, wait=False, radius=0.0)
-            time.sleep(40)
-            click_right()
-            click_right()
-            arm.set_servo_angle(angle=[-16.7, -3.0, -40.9, 81.7, 91.3, 13.7], speed=arm_speed, wait=False, radius=0.0)
+
+            arm.set_servo_angle(angle=[-16.0, -12.1, -33.8, 83.9, 83.7, 13.7], speed=arm_speed, wait=False, radius=0.0)
+            arm.set_servo_angle(angle=[-15.6, -12.0, -30.7, 88.5, 84.6, 13.7], speed=arm_speed, wait=False, radius=0.0)
+
+            arm.set_servo_angle(angle=[-23.5, -12.4, -27.3, 88.8, 89.6, 13.7], speed=arm_speed, wait=False, radius=0.0)
+
+            time.sleep(35)
+            # click_right()
+            # click_right()
+            # looks like it actually will be on correct screen for water
+            arm.set_servo_angle(angle=[-23.5, -12.4, -27.3, 88.8, 89.6, 13.7], speed=arm_speed, wait=False, radius=0.0)
+
+            arm.set_servo_angle(angle=[-16.0, -12.1, -33.8, 83.9, 83.7, 13.7], speed=arm_speed, wait=False, radius=0.0)
+            arm.set_servo_angle(angle=[-15.6, -12.0, -30.7, 88.5, 84.6, 13.7], speed=arm_speed, wait=False, radius=0.0)
     time.sleep(2)
     arm.set_servo_angle(angle=[-23.5, -12.4, -27.3, 88.8, 89.6, 13.7], speed=arm_speed, wait=False, radius=0.0)
 

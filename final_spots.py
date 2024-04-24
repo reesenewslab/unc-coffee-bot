@@ -14,6 +14,8 @@ arm.set_gripper_mode(0) #Set the gripper mode to 0 (position control mode)
 
 def reset_spot():
     arm.set_servo_angle(angle=[54.4, -34.8, -50.1, 103.4, 78, 79.7], speed=arm_speed,  wait=False, radius=0.0)
+    arm.set_servo_angle(angle=[-41.6, -5.5, -82.8, 121.5, 74.5, -59.0], speed=arm_speed,  wait=False, radius=0.0)
+
 
 def open_gripper():
     arm.set_gripper_position(800, wait=True, speed=5000, auto_enable=True) 
