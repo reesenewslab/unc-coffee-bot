@@ -26,17 +26,19 @@ def order_coffee():
     data = request.json
     coffee_type = data.get("coffee_type")
     syrup_type = data.get("syrup_type")
+    coffee_order = Coffee.ESPRESSO
+    syrup_order = Syrup.NONE
 
     if coffee_type: 
         coffee_order = Coffee[coffee_type.upper()]
     else:
         return jsonify({"error": "Coffee type is required"}), 400
     if syrup_type:
-        syrup_type = Syrup[syrup_type.upper()]
+        syrup_order = Syrup[syrup_type.upper()]
     else:
         syrup_type = Syrup.NONE
 
-    main(coffee_type, syrup_type)
+    main(coffee_order, syrup_order)
     return jsonify(f"You ordered {coffee_type} with {syrup_type}")
         
 
