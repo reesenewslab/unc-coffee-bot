@@ -32,6 +32,11 @@ def click_right():
     """Go to the next page."""
     arm.set_servo_angle(angle=[-22.2, 3.2, -46.9, 88.8, 84.4, 13.7], speed=arm_speed, wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-19.3, 6.8, -49.6, 89.4, 84.7, 13.7], speed=arm_speed,  wait=False, radius=0.0)
+    arm.set_servo_angle(angle=[-18, 7, 86.2, 82, 4, 13.7], speed=arm_speed, wait=False, radius=0.0)
+
+    arm.set_servo_angle(angle=[-18.5, 7, 86.2, 82, 4, 13.7], speed=arm_speed, wait=False, radius=0.0)
+    arm.set_servo_angle(angle=[-16.6, 2.8, -55.3, 78.3, 75.9, 13.7], speed=arm_speed,  wait=False, radius=0.0)
+
     arm.set_servo_angle(angle=[-22.2, 3.2, -46.9, 88.8, 84.4, 13.7], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-23.5, -12.4, -27.3, 88.8, 89.6, 13.7], speed=arm_speed, wait=False, radius=0.0)
 
@@ -49,7 +54,7 @@ def make_coffee(coffee_type: Coffee):
             arm.set_servo_angle(angle=[-16.3, -3.0, -35.8, 92.7, 81.7, 13.7], speed=arm_speed, wait=False, radius=0.0)
         case Coffee.MACCHIATO:
             click_right()
-            arm.set_servo_angle(angle=[-16.9, -5, -39.1, 89.4, 81.5, 13.7], speed=arm_speed, wait=False, radius=0.0)
+            arm.set_servo_angle(angle=[-15.2, -1.9, -39.5, 93.2, 75.9, 13.7], speed=arm_speed, wait=False, radius=0.0)
         case Coffee.AMERICANO:
             click_right()
             arm.set_servo_angle(angle=[-14.0, -12.4, -27.7, 88.8, 80.4, 13.7], speed=arm_speed, wait=False, radius=0.0)
