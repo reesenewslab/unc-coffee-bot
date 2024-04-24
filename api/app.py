@@ -1,5 +1,9 @@
 from flask import Flask, request, jsonify
 
+from main import main
+from coffee_types import Coffee
+from syrup_types import Syrup
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -12,12 +16,13 @@ def order_coffee():
     coffee_type = data.get("coffee_type")
     syrup_type = data.get("syrup_type")
 
-    if coffee_type:
-        drink_ordered = {"coffee_type": coffee_type}
+    # if coffee_type:
+    #     drink_ordered = {"coffee_type": coffee_type}
 
-        if syrup_type:
-            drink_ordered["syrup_type"] = syrup_type
-
+    #     if syrup_type:
+    #         drink_ordered["syrup_type"] = syrup_type
+    if coffee_type and syrup_type:
+        main(coffee_type, syrup_type)
         return jsonify(f"You ordered {coffee_type} with {syrup_type}")
     else:
         return jsonify({"error": "Coffee type is required"}), 400

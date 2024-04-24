@@ -1,0 +1,13 @@
+from enum import Enum
+
+
+
+class Coffee(Enum):
+   ESPRESSO = "ESPRESSO"
+   MACCHIATO = "MACCHIATO"
+   LATTE = "LATTE"
+   CAPPUCINO = "CAPPUCINO"
+   FLAT_WHITE = "FLAT WHITE"
+   TEA= "TEA"
+   AMERICANO= "AMERICANO"
+

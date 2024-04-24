@@ -2,7 +2,7 @@
 
 from xarm.wrapper import XArmAPI
 
-ip = "192.168.1.215" #Change this to your xArm IP address
+ip = "192.168.1.215" 
 
 #Initialize the xArm with the following parameters:
 arm = XArmAPI(ip)
@@ -15,27 +15,32 @@ arm_speed: int = 30
 tcp_speed = 30
 tcp_acc = 30
 
-def open_gripper():
-    arm.set_gripper_position(800, wait=True, speed=5000, auto_enable=True) 
-
 
 def get_to_cup():
     """very beginning, going to grab the cup from the dispenser for the first time."""
+    arm.set_gripper_position(700, wait=True, speed=5000, auto_enable=True)       
+
     arm.set_servo_angle(angle=[-31.8, 30.2, -61.2, 135.7, 71.8, -167.9], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-26.6, 57.3, -85.1, 135.7, 70.0, -164.8], speed=arm_speed,  wait=False, radius=0.0)
-    arm.set_servo_angle(angle=[-26.8, 70.8, -95.5, 135.7, 70.2, -162.2], speed=arm_speed,  wait=False, radius=0.0)
-    arm.set_gripper_position(250, wait=True, speed=5000, auto_enable=True)       
+    arm.set_servo_angle(angle=[-30.0, 67.4, -95.9, 125.1, 71.4, -158.6], speed=arm_speed,  wait=False, radius=0.0)
+
+    arm.set_gripper_position(113, wait=True, speed=5000, auto_enable=True)       
 
 
 def pick_up_and_place_cup():
     """Take cup from dispenser and place it under coffee machine."""
-    arm.set_servo_angle(angle=[-28.9, 55.7, -81.5, 133.7, 76.6, -167.9], speed=arm_speed,  wait=False, radius=0.0)
+
+    arm.set_servo_angle(angle=[-29.9, 58.2, -87.9, 125.1, 70.5, -158.6], speed=arm_speed,  wait=False, radius=0.0)
+    arm.set_servo_angle(angle=[-27.8, 46.0, -81.3, 123.1, 64.3, -158.5], speed=arm_speed,  wait=False, radius=0.0)
+
     arm.set_servo_angle(angle=[-22.2, 18.6, -70.0, 133.7, 61.0, -147.7], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-8.8, 19.7, -47.1, 134.9, 58.9, 15.9], speed=arm_speed,  wait=False, radius=40.0)
-    arm.set_servo_angle(angle=[-7.7, 19.6, -37.9, 121.7, 68.5, 15.9], speed=arm_speed,  wait=False, radius=40.0)
-    arm.set_servo_angle(angle=[-5.9, 23.1, -36.4, 121.7, 76.6, 13.7], speed=arm_speed,  wait=False, radius=40.0)
-    arm.set_servo_angle(angle=[-1.7, 28.7, -42.2, 121.7, 76.5, 13.7], speed=arm_speed,  wait=False, radius=40.0)
-    open_gripper()           
+
+    arm.set_servo_angle(angle=[-16.4, 42.1, -55.2, 121.0, 84.5, 6.0], speed=arm_speed, wait=False, radius=0.0)
+    arm.set_servo_angle(angle=[-12.1, 42.4, -50.8, 110.9, 89.0, 6.0], speed=arm_speed, wait=False, radius=0.0)
+    arm.set_servo_angle(angle=[-8.4, 42.5, -54.5, 110.9, 86.5, 8.4], speed=arm_speed, wait=False, radius=0.0)
+
+    arm.set_gripper_position(800, wait=True, speed=5000, auto_enable=True)           
 
 
 def leave_cup_move_to_button():
