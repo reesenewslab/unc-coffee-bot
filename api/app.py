@@ -5,6 +5,7 @@ sys.path.append('../')
 from main import main
 from coffee_types import Coffee
 from syrup_types import Syrup
+from main import final_place_number
 
 app = Flask(__name__)
 
@@ -38,8 +39,8 @@ def order_coffee():
     else:
         syrup_type = Syrup.NONE
 
-    main(coffee_order, syrup_order)
-    return jsonify(f"You ordered {coffee_type} with {syrup_type}")
+    main(coffee_type, syrup_type)
+    return jsonify(f"spot{final_place_number}")
         
 
 if __name__ == "__main__":
