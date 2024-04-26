@@ -16,6 +16,7 @@ tcp_speed = 30
 tcp_acc = 30
 
 def set_arm_speed(amt):
+    global arm_speed
     arm_speed = amt
 
 

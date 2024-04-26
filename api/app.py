@@ -31,7 +31,7 @@ def order_coffee():
     coffee_order = Coffee.ESPRESSO
 
     if coffee_type: 
-        coffee_order = Coffee[coffee_type.upper()]
+        coffee_order = Coffee[coffee_type.upper().replace(" ", "_")]
     else:
         return jsonify({"error": "Coffee type is required"}), 400
     if syrup_type:

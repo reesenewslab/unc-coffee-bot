@@ -9,7 +9,7 @@
 from xarm.wrapper import XArmAPI
 import time
 from enum import Enum
-from common_functions import arm_speed
+from common_functions import arm_speed, set_arm_speed
 from coffee_types import Coffee
 
 ip = "192.168.1.215"
@@ -84,8 +84,11 @@ def make_coffee(coffee_type: Coffee):
     time.sleep(2)
     arm.set_servo_angle(angle=[-23.5, -12.4, -27.3, 88.8, 89.6, 13.7], speed=arm_speed, wait=False, radius=0.0)
 
-    if coffee_type == Coffee.ESPRESSO or coffee_type == Coffee.TEA:
+    if coffee_type == Coffee.ESPRESSO:
         time.sleep(40)
+    elif coffee_type == Coffee.TEA:
+        time.sleep(44)
+        set_arm_speed(10)
     else:
         time.sleep(90)
 
