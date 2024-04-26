@@ -39,7 +39,7 @@ def order_coffee():
     else:
         syrup_type = Syrup.NONE
 
-    main(coffee_type, syrup_type)
+    main(coffee_order, syrup_order)
     return jsonify(f"spot{final_place_number}")
         
 
