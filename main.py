@@ -52,7 +52,6 @@ def move_to_final_location():
    """Place the cup in the final spot depending on what spot has been used last."""
    # this will increase the place to the next place and keep it to max 4 with mod! spots are 0-4
    global final_place_number
-   final_place_number = (final_place_number + 1) % 4
    if final_place_number == 0:
       spot0()
    elif final_place_number == 1:
@@ -61,6 +60,7 @@ def move_to_final_location():
       spot2()
    elif final_place_number == 3:
      spot3()
+   final_place_number = (final_place_number + 1) % 4
 
 
 def main(coffee_type: Coffee, syrup_type: Syrup):
