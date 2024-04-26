@@ -38,7 +38,7 @@ def order_coffee():
         syrup_type = Syrup.NONE
 
     main(coffee_type, syrup_type)
-    return jsonify(f"Spot {final_place_number}")
+    return jsonify(f"spot{final_place_number}")
         
 
 if __name__ == "__main__":
