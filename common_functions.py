@@ -15,6 +15,10 @@ arm_speed: int = 30
 tcp_speed = 30
 tcp_acc = 30
 
+def set_arm_speed(amt):
+    arm_speed = amt
+
+
 
 def get_to_cup():
     """very beginning, going to grab the cup from the dispenser for the first time."""

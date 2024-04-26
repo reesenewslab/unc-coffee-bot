@@ -7,7 +7,7 @@
 # Author: Vinman <vinman.wen@ufactory.cc> <vinman.cub@gmail.com>
 
 from xarm.wrapper import XArmAPI
-from common_functions import arm_speed
+from common_functions import arm_speed, set_arm_speed
 
 ip = "192.168.1.215"
 
@@ -45,13 +45,14 @@ def get_ready_to_syrup():
     arm.set_servo_angle(angle=[50.3, -40.0, -39.8, 192.0, 12.8, -4.8], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[47.2, 25.6, -99.9, 191.9, 16.3, -14.4], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[46.9, 37.8, -119.4, 191.9, 5.6, -14.4], speed=arm_speed,  wait=False, radius=0.0)
+    set_arm_speed(4)
     arm.set_servo_angle(angle=[46.9, 39.5, -119.4, 191.9, 5.6, -14.4], speed=arm_speed,  wait=False, radius=0.0)
 
 
 def squirt_syrup_grab_cup():
-    arm_speed = 25
     arm.set_servo_angle(angle=[46.9, 43.3, -119.4, 191.9, 5.6, -14.4], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[46.9, 39.2, -120.5, 191.9, 5.6, -14.4], speed=arm_speed, wait=False, radius=0.0)
+    set_arm_speed(30)
     arm.set_servo_angle(angle=[44.3, -3.4, -120.5, 191.9, -33.7, -14.4], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[50.5, -22.1, -11.0, 191.9, 55.1, -14.4], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[55.3, -7.7, -23.7, 199.0, 57.0, -8.5], speed=arm_speed,  wait=False, radius=0.0)
