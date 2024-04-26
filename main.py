@@ -3,6 +3,7 @@
 
 from drinks import make_coffee
 from syrups import pump_syrup
+from caramel_syrup import pump_caramel
 from final_spots import spot0, spot1, spot2, spot3
 # from common_functions import open_gripper
 from common_functions import get_full_cup, get_to_cup, pick_up_and_place_cup, leave_cup_move_to_button, move_full_cup_to_central_spot
@@ -38,6 +39,8 @@ def select_syrup(syrup_type: Syrup):
    """Place cup under the correct syrup"""
    if syrup_type == Syrup.NONE:
       return None
+   elif syrup_type == Syrup.CARAMEL:
+      pump_caramel()
    else:
         pump_syrup()
 
