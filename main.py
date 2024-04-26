@@ -63,7 +63,7 @@ def move_to_final_location():
      spot3()
 
 
-def main(coffee_type: Coffee, syrup_type: Syrup):
+def main(coffee_type: Coffee=Coffee.ESPRESSO, syrup_type: Syrup=Syrup.NONE):
    """Execute all of the functions to make the coffee!"""
    cup_intro_sequence()
    select_coffee(coffee_type)
