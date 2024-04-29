@@ -41,7 +41,7 @@ def pick_up_and_place_cup():
     arm.set_servo_angle(angle=[-22.2, 18.6, -70.0, 133.7, 61.0, -147.7], speed=arm_speed,  wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-8.8, 19.7, -47.1, 134.9, 58.9, 15.9], speed=arm_speed,  wait=False, radius=40.0)
 
-    arm.set_servo_angle(angle=[-16.4, 42.1, -55.2, 121.0, 84.5, 6.0], speed=arm_speed, wait=False, radius=0.0)
+    arm.set_servo_angle(angle=[-13.9, 33, -47.5, 112.4, 83, 8.9], speed=arm_speed, wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-12.1, 42.4, -50.8, 110.9, 89.0, 6.0], speed=arm_speed, wait=False, radius=0.0)
     arm.set_servo_angle(angle=[-8.4, 42.5, -54.5, 110.9, 86.5, 8.4], speed=arm_speed, wait=False, radius=0.0)
 
